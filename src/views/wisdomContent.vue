@@ -1,9 +1,14 @@
 <template>
   <div class="wisdom-content">
+    <div>
+      <wisdom-header></wisdom-header>
+    </div>
+    <div class="wisdom-content-echarts">
       <wisdom-left></wisdom-left>
       <wisdom-center></wisdom-center>
       <wisdom-right></wisdom-right>
-      <wisdom-map></wisdom-map>
+    </div>
+    <wisdom-map></wisdom-map>
   </div>
 </template>
 <script>
@@ -11,6 +16,8 @@ import wisdomLeft from './wisdomLeft'
 import wisdomRight from './wisdomRight'
 import wisdomCenter from './wisdomCenter'
 import wisdomMap from './wisdomMap'
+import wisdomHeader from './wisdomHeader'
+
 export default {
   data () {
     return {
@@ -21,7 +28,9 @@ export default {
     wisdomLeft,
     wisdomRight,
     wisdomCenter,
-    wisdomMap
+    wisdomMap,
+    wisdomHeader
+
   }
 }
 </script>
@@ -29,9 +38,15 @@ export default {
 .wisdom-content{
   box-sizing: border-box;
   width:100%;
-  height: calc(100% - 66px);
+  height: 100%;
   position: relative;
   border:1px solid red;
   display: flex;
+  flex-direction: column;
+  &-echarts{
+    display: flex;
+    width: 100%;
+    height: calc(100% - 66px);
+  }
 }
 </style>

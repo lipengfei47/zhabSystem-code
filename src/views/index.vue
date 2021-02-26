@@ -5,7 +5,6 @@
           width:width+'px',
           height:height+'px'
         }">
-      <wisdom-header></wisdom-header>
       <wisdom-content></wisdom-content>
     </div>
 </template>
@@ -13,7 +12,6 @@
 <script>
 import { debounce } from 'utils/common'
 import wisdomContent from './wisdomContent'
-import wisdomHeader from './wisdomHeader'
 
 export default {
   name: 'wisdom-box',
@@ -25,9 +23,7 @@ export default {
     }
   },
   components: {
-    wisdomContent,
-    wisdomHeader
-
+    wisdomContent
   },
   mounted () {
     this.setScale()
@@ -55,7 +51,6 @@ export default {
 .wisdom-box {
   transform: scale(var(--scale)) translate(-50%, -50%);
   box-sizing: border-box;
-  /* background: #00050e; */
   position: absolute;
   left: 50%;
   top: 50%;
