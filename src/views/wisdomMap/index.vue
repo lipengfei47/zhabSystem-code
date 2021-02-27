@@ -1,6 +1,5 @@
 <template>
   <div class="wisdom-map">
-    <img src="../../assets/map-center.png" alt="" srcset="">
   </div>
 </template>
 <script>
@@ -8,6 +7,11 @@ export default {
   data () {
     return {
       name: 'wisdomMap'
+    }
+  },
+  methods: {
+    handClick () {
+      alert('1111111111111111111')
     }
   }
 }
@@ -26,8 +30,32 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  img{
-    width: 800px;
+  .img1 {
+    width: 1000px;
+    margin: -200px 0 0 -40px;
+  }
+  .img2 {
+    width: 1000px;
+    margin: -200px 0 0 -40px;
+  }
+  .img3 {
+    width: 900px;
+    margin: -100px 0 0 -35px;
+  }
+  .sit3{
+    width: 900px;
+    height: 900px;
+    position: absolute;
+  }
+  .name{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    width:100px;
+    height:100px;
+    position: absolute;
+    cursor:pointer
   }
 }
 </style>
