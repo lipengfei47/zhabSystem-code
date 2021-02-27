@@ -42,7 +42,6 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  background: black;
   &-echarts{
     box-sizing: border-box;
     display: flex;
