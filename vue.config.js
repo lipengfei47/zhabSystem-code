@@ -11,5 +11,12 @@ module.exports = {
       .set('views', join('src/views'))
       .set('utils', join('src/utils'))
       .set('components', join('src/components'))
+  },
+  // 调整 webpack 配置
+  configureWebpack: config => {
+    config.externals = {
+      echarts: 'echarts'
+    }
   }
+
 }

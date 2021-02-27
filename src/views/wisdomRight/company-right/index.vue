@@ -1,13 +1,13 @@
 <template>
-  <div class="industry-analysis">
+  <div class="company-right">
     <wisdom-border v-bind={...style}>
-      <div slot='wisdom-border-title'>行业分析</div>
+      <div slot='wisdom-border-title'>企业规模</div>
     </wisdom-border>
   </div>
 </template>
 <script>
 export default {
-  name: 'industry-analysis',
+  name: 'company-right',
   data () {
     return {
       style: {
