@@ -56,5 +56,7 @@ export default {
   top: 50%;
   transition: 0.3s;
   transform-origin: 0 0;
+  /* background: rgb(6, 26, 59); */
+  /* background: rgba(0, 0, 0,0.3); */
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
-  <div class="wisdom-header">头部</div>
+  <div class="wisdom-header">
+  </div>
 </template>
 <script>
 export default {
@@ -15,6 +16,6 @@ export default {
   box-sizing: border-box;
   width: 100%;
   height: 66px;
-  background: #eee;
+  background: url('../../assets/wisdom-header.png') no-repeat;
 }
 </style>
