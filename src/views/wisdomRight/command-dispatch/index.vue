@@ -1,9 +1,20 @@
 <template>
   <div class="command-dispatch">
     <wisdom-border v-bind={...style}>
-      <div slot='wisdom-border-title'>指挥调度</div>
+      <div slot='wisdom-border-title'>
+        <wisdom-tab-switch :width='"100%"'
+                           :height='"60px"'
+                           :tabItemStyle='tabItemStyle'
+                           :tabList='tabList'
+                           :defaultId='selectId'
+                           @onChangItem='onChangItem'></wisdom-tab-switch>
+      </div>
       <div slot='wisdom-border-content'
            class="command-dispatch-content">
+           <!-- <div class="command-dispatch-content-title">
+             <span class="span1">调度次数</span>
+             <span class="span2">532次</span>
+           </div> -->
         <wisdom-custom-table :headerBackgroundColor="'rgba(11, 68, 135, 0.5)'"
                              :headerColor="'#8ec6d8'"
                              :headerHeight="'46px'"
@@ -46,7 +57,29 @@ export default {
         [6, '北京安保', 3077, '78%']
       ],
       noData: false,
-      pageSize: 5
+      pageSize: 5,
+      tabItemStyle: [
+        {
+          marginLeft: '0px'
+        },
+        {
+          marginLeft: '16px'
+        },
+        {
+          marginLeft: '16px'
+        }
+      ],
+      tabList: [
+        {
+          id: 0,
+          value: '指挥调度'
+        },
+        {
+          id: 1,
+          value: '装备'
+        }
+      ],
+      selectId: 0
     }
   },
   components: {
@@ -55,6 +88,12 @@ export default {
 
   },
   methods: {
+    onChangItem (selectId) {
+      this.selectId = selectId
+      if (selectId === 0) {
+      } else if (selectId === 1) {
+      }
+    }
   }
 }
 </script>
@@ -65,5 +104,18 @@ export default {
   height: 100%;
   padding: 20px;
   color: rgb(72, 238, 216);
+  // &-title{
+  //   margin-left: 10px;
+  //   margin-bottom: 10px;
+  //   .span1{
+  //     color: #FFFFFF;
+  //     font-size: 18px;
+  //   }
+  //   .span2{
+  //     margin-left: 10px;
+  //     color: #B48C0B;
+  //     font-size: 18px;
+  //   }
+  // }
 }
 </style>

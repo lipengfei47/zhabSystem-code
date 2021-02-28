@@ -5,12 +5,16 @@
         <wisdom-tab-switch :width='"100%"'
                            :height='"60px"'
                            :tabItemStyle='tabItemStyle'
-                           :tabList='tabList'></wisdom-tab-switch>
+                           :tabList='tabList'
+                           :defaultId='selectId'
+                           @onChangItem='onChangItem'></wisdom-tab-switch>
       </div>
       <div slot='wisdom-border-content'
            class="industry-manage-content">
         <wisdom-echarts-frame @myChartMethod="chartManageBarMethod"
-                              ref="chartManageBar"></wisdom-echarts-frame>
+                              ref="chartManageBar"
+                              v-if="selectId==1"></wisdom-echarts-frame>
+                              <div class="temporary" v-if="selectId==0" ></div>
       </div>
     </wisdom-border>
   </div>
@@ -40,17 +44,14 @@ export default {
       tabList: [
         {
           id: 0,
-          value: '行业经营'
-        },
-        {
-          id: 1,
           value: '占比'
         },
         {
-          id: 2,
+          id: 1,
           value: '趋势'
         }
       ],
+      selectId: 0,
       myChartBar: null
     }
   },
@@ -66,6 +67,10 @@ export default {
       // this.$refs.chartManageBar.showLoading()
       this.myChartBar.setOption(chartOptionManageBar())
       // this.$refs.chartManageBar.hideLoading()
+    },
+    onChangItem (selectId) {
+      console.log('1', selectId)
+      this.selectId = selectId
     }
   }
 }
@@ -76,7 +81,10 @@ export default {
   width: 100%;
   height: 100%;
   padding: 20px;
-  color: rgb(72, 238, 216);
-  color: rgb(43, 202, 197);
+  .temporary{
+    width: 100%;
+    height: 100%;
+    background: url('../../../assets/1.png') no-repeat;
+  }
 }
 </style>

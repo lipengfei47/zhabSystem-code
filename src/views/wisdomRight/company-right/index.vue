@@ -1,7 +1,14 @@
 <template>
   <div class="company-right">
     <wisdom-border v-bind={...style}>
-      <div slot='wisdom-border-title'>企业规模</div>
+      <div slot='wisdom-border-title'>
+        <wisdom-tab-switch :width='"100%"'
+                           :height='"60px"'
+                           :tabItemStyle='tabItemStyle'
+                           :tabList='tabList'
+                           :defaultId='selectId'
+                           @onChangItem='onChangItem'></wisdom-tab-switch>
+      </div>
       <div slot='wisdom-border-content'
            class="industry-manage-content">
         <wisdom-custom-table :headerBackgroundColor="'rgba(23, 170, 246, 0.1)'"
@@ -42,10 +49,72 @@ export default {
         [6, '北京安保', 3077, 'IV']
       ],
       noData: false,
-      pageSize: 5
+      pageSize: 5,
+      tabItemStyle: [
+        {
+          marginLeft: '0px'
+        },
+        {
+          marginLeft: '16px'
+        },
+        {
+          marginLeft: '16px'
+        }
+      ],
+      tabList: [
+        {
+          id: 0,
+          value: '企业规模'
+        },
+        {
+          id: 1,
+          value: '党建'
+        },
+        {
+          id: 2,
+          value: '装备'
+        }
+      ],
+      selectId: 0
     }
   },
   components: {
+  },
+  methods: {
+    onChangItem (selectId) {
+      this.selectId = selectId
+      if (selectId === 0) {
+        this.headerList = ['序号', '企业名', '安保人数', '等级']
+        this.dataList = [
+          [1, '国庆安保', 3077, 'I'],
+          [2, '嘉禾安保', 1290, 'II'],
+          [3, '未来安保', 3077, 'III'],
+          [4, '北京安保', 3077, 'IV'],
+          [5, '仁泰安保', 2094, 'I'],
+          [6, '北京安保', 3077, 'IV']
+        ]
+      } else if (selectId === 1) {
+        this.headerList = ['序号', '企业名', '党支部', '党员数', '党建活动']
+        this.dataList = [
+          [1, '1', 3077, 'I'],
+          [2, '嘉禾安保', 1290, 'II'],
+          [3, '未来安保', 3077, 'III'],
+          [4, '北京安保', 3077, 'IV'],
+          [5, '仁泰安保', 2094, 'I'],
+          [6, '北京安保', 3077, 'IV']
+        ]
+      } else if (selectId === 2) {
+        this.headerList = ['序号', '企业名', '党支部', '党员数', '党建活动']
+        this.dataList = [
+          [1, '1', 3077, 'I'],
+          [2, '2', 1290, 'II'],
+          [3, '未来安保', 3077, 'III'],
+          [4, '北京安保', 3077, 'IV'],
+          [5, '仁泰安保', 2094, 'I'],
+          [6, '北京安保', 3077, 'IV']
+        ]
+      }
+    }
   }
 }
 </script>

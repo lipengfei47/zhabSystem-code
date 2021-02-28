@@ -5,7 +5,7 @@
          :key="index"
          :style="{...tabItemStyle[index]}"
           :class="['tab-item', index==selectId ? 'active' : '']"
-          @click="onChangItem(index)">{{item.value}}</div>
+          @click="ChangItem(index)">{{item.value}}</div>
   </div>
 </template>
 <script>
@@ -79,8 +79,9 @@ export default {
     }
   },
   methods: {
-    onChangItem (index) {
+    ChangItem (index) {
       this.selectId = index
+      this.$emit('onChangItem', index)
     }
   }
 }
