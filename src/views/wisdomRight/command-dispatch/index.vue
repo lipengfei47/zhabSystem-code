@@ -13,7 +13,7 @@
            class="command-dispatch-content">
         <div class="command-dispatch-content-title">
           <span class="span1">调度次数</span>
-          <span class="span2">532次</span>
+          <span class="span2">132次</span>
         </div>
         <wisdom-custom-table :headerBackgroundColor="'rgba(11, 68, 135, 0.5)'"
                              :headerColor="'#8ec6d8'"
@@ -80,7 +80,7 @@ export default {
         },
         {
           id: 1,
-          value: '装备'
+          value: '在岗'
         }
       ],
       selectId: 0
@@ -95,7 +95,23 @@ export default {
     onChangItem (selectId) {
       this.selectId = selectId
       if (selectId === 0) {
+        this.headerList = ['排名', '企业名', '次数', '占比']
+        this.dataList = [
+          [`<span style="${styleIcon}background: url(${rank1Url}) no-repeat"><span>`, '国庆安保', 77, '90%'],
+          [`<span style="${styleIcon}background: url(${rank2Url}) no-repeat"><span>`, '嘉禾安保', 90, '10%'],
+          [`<span style="${styleIcon}background: url(${rank3Url}) no-repeat"><span>`, '未来安保', 77, '29%'],
+          [4, '北京安保', 30, '30%'],
+          [5, '仁泰安保', 20, '25%']
+        ]
       } else if (selectId === 1) {
+        this.headerList = ['排名', '企业名', '在岗人数', '退伍军人']
+        this.dataList = [
+          [`<span style="${styleIcon}background: url(${rank1Url}) no-repeat"><span>`, '国庆安保', 30, 28],
+          [`<span style="${styleIcon}background: url(${rank2Url}) no-repeat"><span>`, '嘉禾安保', 12, 12],
+          [`<span style="${styleIcon}background: url(${rank3Url}) no-repeat"><span>`, '未来安保', 30, 29],
+          [4, '北京安保', 3077, 34],
+          [5, '仁泰安保', 2094, 21]
+        ]
       }
     }
   }

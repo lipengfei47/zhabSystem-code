@@ -460,7 +460,7 @@ export function chartOptionAnalysis () {
         },
         margin: 100
       },
-      data: ['保安企业数', '保安人数', '党员人数', '持证人数', '行业规模'],
+      data: ['保安人数', '党员人数', '持证人数', '调度次数'],
       inverse: true
     },
     {
@@ -469,7 +469,7 @@ export function chartOptionAnalysis () {
       splitLine: 'none',
       axisTick: 'none',
       axisLine: 'none',
-      data: [210, 19465, 1040, 4580, 27481],
+      data: [1040, 4580, 1420, 12],
       inverse: true,
       axisLabel: {
         show: true,
@@ -483,8 +483,8 @@ export function chartOptionAnalysis () {
         },
         formatter: function (value, index) {
           const obj = {
-            0: '家',
-            4: '万'
+            0: '人',
+            3: '次'
           }
           return `${value}${obj[index] || '人'}`
         },

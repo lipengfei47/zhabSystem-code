@@ -1,7 +1,9 @@
+<!--行业经营页面 -->
 <template>
   <div class="industry-manage">
     <wisdom-border v-bind={...style}>
-      <div slot='wisdom-border-title'>
+      <div slot='wisdom-border-title' class="wisdom-border-title-flex">
+        <span class="industry-manage-text">行业经营</span>
         <wisdom-tab-switch :width='"100%"'
                            :height='"60px"'
                            :tabItemStyle='tabItemStyle'
@@ -76,6 +78,14 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
+.wisdom-border-title-flex{
+  display: flex;
+  .industry-manage-text{
+    display: inline-block;
+    width: 90px;
+    height: 60px;
+  }
+}
 .industry-manage-content {
   box-sizing: border-box;
   width: 100%;

@@ -13,7 +13,7 @@
            class="command-dispatch-content">
         <div class="command-dispatch-content-title">
           <span class="span1">调度次数</span>
-          <span class="span2">500次</span>
+          <span class="span2">532</span>
         </div>
         <wisdom-custom-table :headerBackgroundColor="'rgba(11, 68, 135, 0.5)'"
                              :headerColor="'#8ec6d8'"
@@ -47,14 +47,12 @@ export default {
         height: '338px',
         url: require('../../../assets/industry-manage-border.png')
       },
-      headerList: ['序号', '企业名', '次数', '占比'],
+      headerList: ['排名', '姓名', '次数', '评价'],
       dataList: [
-        [`<span style="${styleIcon}background: url(${rank1Url}) no-repeat"><span>`, '国庆安保', 3077, '90%'],
-        [`<span style="${styleIcon}background: url(${rank2Url}) no-repeat"><span>`, '嘉禾安保', 1290, '10%'],
-        [`<span style="${styleIcon}background: url(${rank3Url}) no-repeat"><span>`, '未来安保', 3077, '29%'],
-        [4, '北京安保', 3077, '30%'],
-        [5, '仁泰安保', 2094, '25%'],
-        [6, '北京安保', 3077, '78%']
+        [`<span style="${styleIcon}background: url(${rank1Url}) no-repeat"><span>`, '张某某', 42, '4'],
+        [`<span style="${styleIcon}background: url(${rank2Url}) no-repeat"><span>`, '王某某', 36, '3'],
+        [`<span style="${styleIcon}background: url(${rank3Url}) no-repeat"><span>`, '李某某', 34, '3'],
+        [4, '张某某', 28, '2']
       ],
       noData: false,
       pageSize: 5,
@@ -91,7 +89,23 @@ export default {
     onChangItem (selectId) {
       this.selectId = selectId
       if (selectId === 0) {
+        this.headerList = ['排名', '姓名', '次数', '评价']
+        this.dataList = [
+          [`<span style="${styleIcon}background: url(${rank1Url}) no-repeat"><span>`, '张某某', 15, '90%'],
+          [`<span style="${styleIcon}background: url(${rank2Url}) no-repeat"><span>`, '李某某', 12, '10%'],
+          [`<span style="${styleIcon}background: url(${rank3Url}) no-repeat"><span>`, '赵某某', 10, '29%'],
+          [4, '王某某', 8, '30%'],
+          [5, '韩某某', 5, '25%']
+        ]
       } else if (selectId === 1) {
+        this.headerList = ['排名', '区域', '在岗人数', '可调人数']
+        this.dataList = [
+          [`<span style="${styleIcon}background: url(${rank1Url}) no-repeat"><span>`, 'A区域', 77, 50],
+          [`<span style="${styleIcon}background: url(${rank2Url}) no-repeat"><span>`, 'B区域', 90, 78],
+          [`<span style="${styleIcon}background: url(${rank3Url}) no-repeat"><span>`, 'C区域', 77, 41],
+          [4, 'D区域', 54, 30],
+          [5, 'E区域', 21, 15]
+        ]
       }
     }
   }
