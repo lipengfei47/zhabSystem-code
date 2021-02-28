@@ -52,12 +52,9 @@ export default {
 <style lang="scss" scoped>
 .wisdom-map{
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   position: absolute;
-  left: 0;
-  top: 0;
-  background-size: 1920px 1080px;
+  left: 610px;
+  top: 250px;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -75,8 +72,8 @@ export default {
     margin: 0 0 0 -80px;
   }
   .sit3{
-    width: 900px;
-    height: 900px;
+    width: 600px;
+    height: 600px;
     position: absolute;
   }
   .name{
