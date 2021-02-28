@@ -3,33 +3,37 @@
     <div class="title">张三</div>
     <div class="line">
     <img src="../../assets/spot.png" style=" float:left;margin: 10px 11px 0 33px">
-    <div class="text">位置：崂山区松岭路68号</div>
+    <div class="text">年龄：29岁</div>
     </div>
     <div class="line">
     <img src="../../assets/spot.png" style=" float:left;margin: 10px 11px 0 33px">
-    <div class="text">企业法人：张扬</div>
+    <div class="text">学历：高中</div>
     </div>
     <div class="line">
     <img src="../../assets/spot.png" style=" float:left;margin: 10px 11px 0 33px">
-    <div class="text">安保人数：45</div>
+    <div class="text">党员：是</div>
     </div>
     <div class="line">
     <img src="../../assets/spot.png" style=" float:left;margin: 10px 11px 0 33px">
-    <div class="text">安保车辆：10</div>
+    <div class="text">电话：13364044400</div>
     </div>
     <div class="line">
     <img src="../../assets/spot.png" style=" float:left;margin: 10px 11px 0 33px">
-    <div class="text">指挥调度：6</div>
+    <div class="text">服务区域：A区域</div>
+    </div>
+    <div class="line">
+    <img src="../../assets/spot.png" style=" float:left;margin: 10px 11px 0 33px">
+    <div class="text">指挥调度：10次</div>
     </div>
     <div class="line">
     <img src="../../assets/spot.png" style=" float:left;margin: 10px 11px 0 33px">
     <div class="text"><div style="float:left">等级评价：</div>
       <div class="start">
-        <img src="../../assets/startl.png" style="float:left;margin-right:5px">
-        <img src="../../assets/startl.png" style="float:left;margin-right:5px">
-        <img src="../../assets/startl.png" style="float:left;margin-right:5px">
-        <img src="../../assets/startd.png" style="float:left;margin-right:5px">
-        <img src="../../assets/startd.png" style="float:left;margin-right:5px">
+        <img src="../../assets/startl.png" style="float:left;margin-right:2px">
+        <img src="../../assets/startl.png" style="float:left;margin-right:2px">
+        <img src="../../assets/startl.png" style="float:left;margin-right:2px">
+        <img src="../../assets/startd.png" style="float:left;margin-right:2px">
+        <img src="../../assets/startd.png" style="float:left;margin-right:2px">
       </div>
     </div>
     </div>
@@ -61,7 +65,7 @@ export default {
     line-height: 20px;
     color: #fff;
     letter-spacing: 3px;
-    margin: 34px 0 20px 31px;
+    margin: 24px 0 20px 31px;
   }
   .line{
     width: 248px;
