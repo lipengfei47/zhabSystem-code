@@ -1,17 +1,8 @@
 <template>
   <div class="industry-analysis">
     <wisdom-border v-bind="{ ...style }">
-      <div slot="wisdom-border-title">行业分析</div>
+      <div slot="wisdom-border-title">案情信息</div>
       <div slot="wisdom-border-content" class="census-register-content">
-        <div class="wisdom-analysis">
-          <div class="wisdom-analysis-left">保安培训机构<span class="analysic-weight">3家</span></div>
-          <div class="wisdom-analysis-right">守押企业<span class="analysic-weight">3家</span></div>
-        </div>
-        <wisdom-echarts-frame
-          class="anaylsis-chart"
-          @myChartMethod="chartManageBarMethod"
-          ref="chartManageBar"
-        ></wisdom-echarts-frame>
       </div>
     </wisdom-border>
   </div>
@@ -49,40 +40,10 @@ export default {
   width: 100%;
   height: 100%;
   padding: 20px;
-  color: rgb(72, 238, 216);
-  color: rgb(43, 202, 197);
+  background: url('../../../assets/2.png') no-repeat center;
   .anaylsis-chart {
     height: calc(100% - 60px);
     margin-top: 16px;
-  }
-}
-.wisdom-analysis {
-  box-sizing: border-box;
-  width: 382px;
-  height: 44px;
-  padding: 0 37px 0 30px;
-  line-height: 44px;
-  margin: 0 auto;
-  font-size: 16px;
-  color: #1cbde0;
-  background: url('../../../assets/analysis-bg.png') 0 0 / 100% 100% no-repeat;
-  &::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    clear: both;
-  }
-  .wisdom-analysis-left {
-    float: left;
-  }
-  .wisdom-analysis-right {
-    float: right;
-  }
-  .analysic-weight {
-    color: #F7B500;
-    font-weight: 800;
-    margin-left: 16px;
   }
 }
 </style>
