@@ -1,6 +1,8 @@
 <template>
   <div class="bg">
-    <div class="title"> <img src="../../assets/crown1.png" style="margin-right:10px">国安安保服务有限公司</div>
+    <div class="title" v-if="title == '1'"> <img  src="../../assets/crown1.png" style="margin-right:10px">国安安保服务有限公司</div>
+    <div class="title" v-if="title == '2'"> <img  src="../../assets/crown2.png" style="margin-right:10px">国安安保服务有限公司</div>
+    <div class="title" v-if="title == '3'"> <img  src="../../assets/crown3.png" style="margin-right:10px">国安安保服务有限公司</div>
     <div class="line">
     <img src="../../assets/spot.png" style=" float:left;margin: 10px 11px 0 33px">
     <div class="text">位置：崂山区松岭路68号</div>
@@ -42,6 +44,9 @@ export default {
     return {
 
     }
+  },
+  props: {
+    title: String
   }
 }
 </script>
@@ -61,7 +66,7 @@ export default {
     line-height: 20px;
     color: #fff;
     text-align: center;
-    margin: 34px 0 20px 0;
+    margin: 34px 0 40px 0;
   }
   .line{
     width: 296px;
