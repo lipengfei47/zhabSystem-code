@@ -5,7 +5,6 @@
       <div slot='wisdom-border-content' class="census-register-content">
         <!-- <wisdom-echarts-frame @myChartMethod="chartManageBarMethod"
                               ref="chartManageBar"></wisdom-echarts-frame> -->
-                              3333333333
       </div>
     </wisdom-border>
   </div>
