@@ -11,13 +11,13 @@
       </div>
       <div slot='wisdom-border-content'
            class="command-dispatch-content">
-           <!-- <div class="command-dispatch-content-title">
-             <span class="span1">调度次数</span>
-             <span class="span2">532次</span>
-           </div> -->
+        <div class="command-dispatch-content-title">
+          <span class="span1">调度次数</span>
+          <span class="span2">532次</span>
+        </div>
         <wisdom-custom-table :headerBackgroundColor="'rgba(11, 68, 135, 0.5)'"
                              :headerColor="'#8ec6d8'"
-                             :headerHeight="'46px'"
+                             :headerHeight="'25px'"
                              :headerFontSize="'18px'"
                              :bodyTdColor="'#3eeef0'"
                              :bodyTdFontSize="'18px'"
@@ -104,18 +104,18 @@ export default {
   height: 100%;
   padding: 20px;
   color: rgb(72, 238, 216);
-  // &-title{
-  //   margin-left: 10px;
-  //   margin-bottom: 10px;
-  //   .span1{
-  //     color: #FFFFFF;
-  //     font-size: 18px;
-  //   }
-  //   .span2{
-  //     margin-left: 10px;
-  //     color: #B48C0B;
-  //     font-size: 18px;
-  //   }
-  // }
+  &-title{
+    margin-left: 10px;
+    margin-bottom: 2px;
+    .span1{
+      color: #FFFFFF;
+      font-size: 18px;
+    }
+    .span2{
+      margin-left: 10px;
+      color: #B48C0B;
+      font-size: 18px;
+    }
+  }
 }
 </style>
