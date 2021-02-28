@@ -35,7 +35,7 @@
     </div>
     <img src="../../assets/map-center2.png" class="img2" alt="" srcset="" > -->
     <!-- 第三章图 -->
-    <dialog3 id="dialog" v-show="flag"></dialog3>
+    <dialog2 id="dialog" v-show="flag"></dialog2>
     <dialog4 id="dialog4" v-show="flag2"></dialog4>
     <img src="../../assets/map-center3.png" class="img3" alt="" srcset="" >
     <div class="sit3">
@@ -53,19 +53,23 @@
     @mouseleave="hide">F区</div>
       <div class="name" style="left: 384px;top: 354px" @click="handClick" @mouseover="display"
     @mouseleave="hide">G区</div>
-      <img src="../../assets/jb.png" style="position: absolute;left: 329px;top: 237px" @click="handClick" @mouseover="displayp"
+      <img src="../../assets/jb.png" style="position: absolute;left: 329px;top: 237px" @click="handClick" @mouseover="display"
+    @mouseleave="hide">
+      <img src="../../assets/p.png" style="position: absolute;left: 294px;top: 287px;z-index: 40;" @click="handClick" @mouseover="displayp"
     @mouseleave="hidep">
-      <img src="../../assets/p.png" style="position: absolute;left: 294px;top: 287px" @click="handClick">
-      <img src="../../assets/p.png" style="position: absolute;left: 373px;top: 400px" @click="handClick">
-      <img src="../../assets/p.png" style="position: absolute;left: 403px;top: 247px" @click="handClick">
-      <img src="../../assets/p.png" style="position: absolute;left: 100px;top: 100px" @click="handClick">
+      <img src="../../assets/p.png" style="position: absolute;left: 373px;top: 400px;z-index: 40;" @click="handClick" @mouseover="displayp"
+    @mouseleave="hidep">
+      <img src="../../assets/p.png" style="position: absolute;left: 403px;top: 247px;z-index: 40;" @click="handClick" @mouseover="displayp"
+    @mouseleave="hidep">
+      <img src="../../assets/p.png" style="position: absolute;left: 100px;top: 100px;z-index: 40;" @click="handClick" @mouseover="displayp"
+    @mouseleave="hidep">
     </div>
   </div>
 </template>
 <script>
 // import dialog1 from './dialog1.vue'
-// import dialog2 from './dialog2.vue'
-import dialog3 from './dialog3.vue'
+import dialog2 from './dialog2.vue'
+// import dialog3 from './dialog3.vue'
 import dialog4 from './dialog4.vue'
 export default {
   data () {
@@ -77,8 +81,8 @@ export default {
   },
   components: {
     // dialog1,
-    // dialog2,
-    dialog3,
+    dialog2,
+    // dialog3,
     dialog4
   },
   methods: {
@@ -99,8 +103,8 @@ export default {
     },
     displayp (e) {
       this.flag2 = true
-      var x = e.target.offsetLeft - 70
-      var y = e.target.offsetTop - 350
+      var x = e.target.offsetLeft - 100
+      var y = e.target.offsetTop - 340
       var dom = document.getElementById('dialog4')
       console.log(dom.style.left, '是假对象')
       dom.style.left = x + 'px'
@@ -156,6 +160,11 @@ export default {
 #dialog{
   left: 20px;
   top: 20px;
-  z-index: 40;
+  z-index: 41;
+}
+#dialog4{
+  left: 20px;
+  top: 20px;
+  z-index: 41;
 }
 </style>
