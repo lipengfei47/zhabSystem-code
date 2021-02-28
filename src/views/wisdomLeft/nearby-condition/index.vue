@@ -8,8 +8,7 @@
            class="industry-manage-content">
         <wisdom-echarts-frame @myChartMethod="chartManageBarMethod"
                               ref="chartManageBar"
-                              v-if="selectId==1"></wisdom-echarts-frame>
-                              <div class="temporary" v-if="selectId==0" ></div>
+                              ></wisdom-echarts-frame>
       </div>
     </wisdom-border>
   </div>
@@ -39,7 +38,7 @@ export default {
       this.$refs.chartManageBar.clear()
       // this.$refs.chartManageBar.showLoading()
       this.myChartBar.setOption(chartOptionManageBar())
-      // this.$refs.chartManageBar.hideLoading()
+      this.$refs.chartManageBar.hideLoading()
     }
   }
 }
