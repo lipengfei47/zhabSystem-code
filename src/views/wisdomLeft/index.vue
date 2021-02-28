@@ -7,6 +7,8 @@
       <case-info v-if="pageType==='caseOutPage'"></case-info>
       <!-- 企业分析 -->
       <company-analysis v-if="pageType==='companyDeatilPage'"></company-analysis>
+      <!--调度企业企业信息页面  案情信息  -->
+      <case-info-company v-if="pageType==='caseCompanyPage'"></case-info-company>
     </template>
     <template>
       <!-- 行业经营 -->
@@ -14,7 +16,7 @@
       <!-- 附近情况 -->
       <nearby-condition v-if="pageType==='caseOutPage'"></nearby-condition>
       <!-- 企业经营情况 -->
-      <company-operation-condition v-if="pageType==='companyDeatilPage'"></company-operation-condition>
+      <company-operation-condition v-if="pageType==='companyDeatilPage' ||pageType==='caseCompanyPage' "></company-operation-condition>
     </template>
     <!-- 人员构成 -->
     <staff-composition></staff-composition>
@@ -25,6 +27,7 @@ import industryAnalysis from './industry-analysis'
 import industryManage from './industry-manage'
 import staffComposition from './staff-composition'
 import caseInfo from './case-info'
+import caseInfoCompany from './case-info-company'
 import nearbyCondition from './nearby-condition'
 import companyAnalysis from './company-analysis'
 import companyOperationCondition from './company-operation-condition'
@@ -45,7 +48,8 @@ export default {
     caseInfo,
     nearbyCondition,
     companyAnalysis,
-    companyOperationCondition
+    companyOperationCondition,
+    caseInfoCompany
   },
   methods: {
     ...mapActions({
