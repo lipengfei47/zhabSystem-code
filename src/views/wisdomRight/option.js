@@ -6,17 +6,17 @@ export function chartOptionSatff () {
 
     title: [{
       text: '外地人员',
-      x: 'center',
+      x: '48%',
       bottom: '5%',
       textStyle: {
         color: '#FFFFFF',
-        fontSize: 12,
+        fontSize: 15,
         fontWeight: '100'
       }
     }, {
       text: '75%',
-      x: 'center',
-      top: '43%',
+      x: '52%',
+      top: '34%',
       textStyle: {
         fontSize: '20',
         color: '#FFFFFF',
@@ -25,8 +25,8 @@ export function chartOptionSatff () {
       }
     }],
     polar: {
-      radius: ['42%', '52%'],
-      center: ['50%', '50%']
+      radius: ['42%', '60%'],
+      center: ['65%', '40%']
     },
     angleAxis: {
       max: 100,
@@ -75,9 +75,9 @@ export function chartOptionSatff () {
       name: '',
       type: 'pie',
       startAngle: 80,
-      radius: ['56%'],
+      radius: ['42%', '60%'],
       hoverAnimation: false,
-      center: ['50%', '50%'],
+      center: ['65%', '40%'],
       itemStyle: {
         color: 'rgba(66, 66, 66, .1)',
         borderWidth: 1,
@@ -89,9 +89,9 @@ export function chartOptionSatff () {
       name: '',
       type: 'pie',
       startAngle: 80,
-      radius: ['38%'],
+      radius: ['42%', '60%'],
       hoverAnimation: false,
-      center: ['50%', '50%'],
+      center: ['65%', '40%'],
       itemStyle: {
         color: 'rgba(66, 66, 66, .1)',
         borderWidth: 1,
@@ -108,17 +108,17 @@ export function chartOptionLocal () {
 
     title: [{
       text: '本地人员',
-      x: 'center',
+      x: '18%',
       bottom: '5%',
       textStyle: {
         color: '#FFFFFF',
-        fontSize: 12,
+        fontSize: 15,
         fontWeight: '100'
       }
     }, {
       text: '25%',
-      x: 'center',
-      top: '43%',
+      x: '22%',
+      top: '34%',
       textStyle: {
         fontSize: '20',
         color: '#FFFFFF',
@@ -127,8 +127,8 @@ export function chartOptionLocal () {
       }
     }],
     polar: {
-      radius: ['42%', '52%'],
-      center: ['50%', '50%']
+      radius: ['42%', '60%'],
+      center: ['35%', '40%']
     },
     angleAxis: {
       max: 100,
@@ -157,7 +157,7 @@ export function chartOptionLocal () {
       backgroundStyle: {
         color: 'rgba(66, 66, 66, .3)'
       },
-      data: [20],
+      data: [25],
       coordinateSystem: 'polar',
 
       itemStyle: {
@@ -178,9 +178,9 @@ export function chartOptionLocal () {
       name: '',
       type: 'pie',
       startAngle: 80,
-      radius: ['56%'],
+      radius: ['42%', '60%'],
       hoverAnimation: false,
-      center: ['50%', '50%'],
+      center: ['35%', '40%'],
       itemStyle: {
         color: 'rgba(66, 66, 66, .1)',
         borderWidth: 1,
@@ -192,9 +192,9 @@ export function chartOptionLocal () {
       name: '',
       type: 'pie',
       startAngle: 80,
-      radius: ['38%'],
+      radius: ['42%', '60%'],
       hoverAnimation: false,
-      center: ['50%', '50%'],
+      center: ['35%', '40%'],
       itemStyle: {
         color: 'rgba(66, 66, 66, .1)',
         borderWidth: 1,

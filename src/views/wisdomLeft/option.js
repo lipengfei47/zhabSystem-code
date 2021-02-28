@@ -145,3 +145,251 @@ export function chartOptionSatff () {
     ]
   }
 }
+
+export function chartOptionAnalysis () {
+  return {
+    grid: [{
+      // 左侧的柱状图grid
+      width: '100%',
+      left: '1%',
+      top: '0',
+      right: '0',
+      bottom: '0'
+    }],
+    xAxis: [{
+      // 左侧柱状图的X轴
+      gridIndex: 0, // x 轴所在的 grid 的索引
+      show: false
+    }],
+    yAxis: [{
+      // 左侧柱状图的Y轴
+      gridIndex: 0, // y轴所在的 grid 的索引
+      splitLine: 'none',
+      axisTick: 'none',
+      axisLine: 'none',
+      axisLabel: {
+        verticalAlign: 'bottom',
+        align: 'left',
+        padding: [0, 0, 15, 15],
+        textStyle: {
+          color: '#FFFFFF',
+          fontSize: '16'
+        }
+      },
+      data: ['检查', '维修', '更换', '未处理'],
+      inverse: true
+    },
+    {
+      // 左侧柱状图的Y轴
+      gridIndex: 0, // y轴所在的 grid 的索引
+      splitLine: 'none',
+      axisTick: 'none',
+      axisLine: 'none',
+      data: [555, 444, 333, 222],
+      inverse: true,
+      axisLabel: {
+        show: true,
+        verticalAlign: 'bottom',
+        align: 'right',
+        padding: [0, 160, 15, 0],
+        textStyle: {
+          color: '#fff',
+          fontSize: '16'
+        },
+        formatter: function (value) {
+          return value + '个'
+        },
+        rich: {
+          y: {
+            color: '#befbff',
+            fontSize: 16
+          },
+          x: {
+            color: '#f6cf42',
+            fontSize: 16
+          }
+        }
+      }
+    },
+    {
+      // 左侧柱状图的Y轴
+      gridIndex: 0, // y轴所在的 grid 的索引
+      splitLine: 'none',
+      axisTick: 'none',
+      axisLine: 'none',
+      data: []
+    }
+    ],
+    series: [{
+      name: '检查',
+      type: 'bar',
+      xAxisIndex: 0, // 使用的 x 轴的 index，在单个图表实例中存在多个 x 轴的时候有用。
+      yAxisIndex: 0, // 使用的 y 轴的 index，在单个图表实例中存在多个 y轴的时候有用。
+      data: [555],
+      barWidth: 15,
+      itemStyle: {
+        normal: {
+          color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+            'rgba(68, 180, 255, 0.2)', 'rgba(68, 180, 255, 1)'
+          ].map((color, offset) => ({
+            color,
+            offset
+          })))
+        }
+      },
+      z: 2
+    }, {
+      name: '维修',
+      type: 'bar',
+      xAxisIndex: 0, // 使用的 x 轴的 index，在单个图表实例中存在多个 x 轴的时候有用。
+      yAxisIndex: 0, // 使用的 y 轴的 index，在单个图表实例中存在多个 y轴的时候有用。
+      data: [444],
+      barWidth: 15,
+      itemStyle: {
+        normal: {
+          color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+            'rgba(22, 231, 56, 0.2)', 'rgba(22, 231, 56, 1)'
+          ].map((color, offset) => ({
+            color,
+            offset
+          })))
+        }
+      },
+      z: 2
+    }, {
+      name: '更换',
+      type: 'bar',
+      xAxisIndex: 0, // 使用的 x 轴的 index，在单个图表实例中存在多个 x 轴的时候有用。
+      yAxisIndex: 0, // 使用的 y 轴的 index，在单个图表实例中存在多个 y轴的时候有用。
+      data: [333],
+      barWidth: 15,
+      itemStyle: {
+        normal: {
+          color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+            'rgba(253, 191, 25, 0.2)', 'rgba(253, 191, 25, 1)'
+          ].map((color, offset) => ({
+            color,
+            offset
+          })))
+        }
+      },
+      z: 2
+    },
+    {
+      name: '未处理',
+      type: 'bar',
+      xAxisIndex: 0, // 使用的 x 轴的 index，在单个图表实例中存在多个 x 轴的时候有用。
+      yAxisIndex: 0, // 使用的 y 轴的 index，在单个图表实例中存在多个 y轴的时候有用。
+      data: [222],
+      barWidth: 15,
+      itemStyle: {
+        normal: {
+          color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+            'rgba(255, 57, 57, 0.2)', 'rgba(255, 57, 57, 1)'
+          ].map((color, offset) => ({
+            color,
+            offset
+          })))
+        }
+      },
+      z: 2
+    },
+    {
+      name: '外框',
+      type: 'bar',
+      xAxisIndex: 0, // 使用的 x 轴的 index，在单个图表实例中存在多个 x 轴的时候有用。
+      yAxisIndex: 0, // 使用的 y 轴的 index，在单个图表实例中存在多个 y轴的时候有用。
+      barGap: '-100%',
+      data: [1554, 1554, 1554, 1554],
+      barWidth: 15,
+      itemStyle: {
+        normal: {
+          color: 'rgba(255, 255, 255, 0.15)',
+          barBorderRadius: 6
+        }
+      },
+      z: 0
+    }, {
+      name: '检查',
+      type: 'pictorialBar',
+      symbol: 'image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA6CAMAAADWZboaAAAAZlBMVEUAAABe3uVe3+Vf3uVf3+Zf3uVg3+Zg3+Zf3+Vi4OZh4OZg3+Z86/Bh3+Zi4Odj4Odi4OZ86/B76/B86/Bj4ed56+9x5+xn4umB7/N87PB36e+A7/N+7fF/7vJ/7vJ+7fGA7/OB7/PReX+lAAAAIXRSTlMABQkVDREmIhk3MR10LEFFPHh7cUprXE35h2XnqMLAp+mHAG9cAAAB5ElEQVRIx83WjU7CMBQFYIoiKMqU/XUboHv/l/Tce7t2XamDNSacETEmX86tlK2rx4py150o+MstMBLwWRfHKo6JCVxLnvmFGBjFQ58oF1//sUZhGy/ClSTWObgnL4O+bkeN4nY2okfNMbkRt9/vtxz8InoTsWplJSCzFxPmO8+GpSIByX3YQAuGDWtRKhKjCnxDXhF6Z4yxnZ20Wgko7BMRDmxtSGVaI4kdTIgb+zTYoJQlIMlDlmUFgrcDWWC201qSayqlTkiCddWWeV62VU0YlnpRi9VOKaSUsiyq/N0krwq2Ugt7lVpZl5BfHNiytjagMi+XYp0kCR45hMlivVQrE/uU5pXSrCB5bM6d1t2lOZItMqmliT3q5uVxqxzyW/ccfYLNKx7ZTeykMvNyac2yt2Fbc61MHLSC0rwoxbiNdlQ3GBm1NLHQsHUrtEXppR/ljNpW6DbSCoqlFiVoN6YdaFlgsSFVPs1BdT8OaB5QyQzVcaqWDows/zepxR8ObLglTrdtCRVuRNj4Rrxh+//0ke2f8KVL+Kon3GCSbmsJN9OUW3j6g0Ns+LgCij2u0h+Sghc8mlMPBMgdx5DFh59VmOVHrvmDnoNxCz3J7MFWsMuaLyR089xz/xhlfijvwutR8gv3zk6BLUUeCgAAAABJRU5ErkJggg==',
+      symbolSize: [50, 50],
+      symbolOffset: [20, 0],
+      z: 12,
+      data: [{
+        value: 555,
+        symbolPosition: 'end'
+      }, {
+        value: 0,
+        symbolPosition: 'end'
+      }, {
+        value: 0,
+        symbolPosition: 'end'
+      }, {
+        value: 0,
+        symbolPosition: 'end'
+      }]
+    }, {
+      name: '维修',
+      type: 'pictorialBar',
+      symbol: 'image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA6CAMAAADWZboaAAAAZlBMVEUAAABe3uVe3+Vf3uVf3+Zf3uVg3+Zg3+Zf3+Vi4OZh4OZg3+Z86/Bh3+Zi4Odj4Odi4OZ86/B76/B86/Bj4ed56+9x5+xn4umB7/N87PB36e+A7/N+7fF/7vJ/7vJ+7fGA7/OB7/PReX+lAAAAIXRSTlMABQkVDREmIhk3MR10LEFFPHh7cUprXE35h2XnqMLAp+mHAG9cAAAB5ElEQVRIx83WjU7CMBQFYIoiKMqU/XUboHv/l/Tce7t2XamDNSacETEmX86tlK2rx4py150o+MstMBLwWRfHKo6JCVxLnvmFGBjFQ58oF1//sUZhGy/ClSTWObgnL4O+bkeN4nY2okfNMbkRt9/vtxz8InoTsWplJSCzFxPmO8+GpSIByX3YQAuGDWtRKhKjCnxDXhF6Z4yxnZ20Wgko7BMRDmxtSGVaI4kdTIgb+zTYoJQlIMlDlmUFgrcDWWC201qSayqlTkiCddWWeV62VU0YlnpRi9VOKaSUsiyq/N0krwq2Ugt7lVpZl5BfHNiytjagMi+XYp0kCR45hMlivVQrE/uU5pXSrCB5bM6d1t2lOZItMqmliT3q5uVxqxzyW/ccfYLNKx7ZTeykMvNyac2yt2Fbc61MHLSC0rwoxbiNdlQ3GBm1NLHQsHUrtEXppR/ljNpW6DbSCoqlFiVoN6YdaFlgsSFVPs1BdT8OaB5QyQzVcaqWDows/zepxR8ObLglTrdtCRVuRNj4Rrxh+//0ke2f8KVL+Kon3GCSbmsJN9OUW3j6g0Ns+LgCij2u0h+Sghc8mlMPBMgdx5DFh59VmOVHrvmDnoNxCz3J7MFWsMuaLyR089xz/xhlfijvwutR8gv3zk6BLUUeCgAAAABJRU5ErkJggg==',
+      symbolSize: [50, 50],
+      symbolOffset: [20, 0],
+      z: 12,
+      data: [{
+        value: 0,
+        symbolPosition: 'end'
+      }, {
+        value: 444,
+        symbolPosition: 'end'
+      }, {
+        value: 0,
+        symbolPosition: 'end'
+      }, {
+        value: 0,
+        symbolPosition: 'end'
+      }]
+    }, {
+      name: '更换',
+      type: 'pictorialBar',
+      symbol: 'image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA6CAMAAADWZboaAAAAZlBMVEUAAABe3uVe3+Vf3uVf3+Zf3uVg3+Zg3+Zf3+Vi4OZh4OZg3+Z86/Bh3+Zi4Odj4Odi4OZ86/B76/B86/Bj4ed56+9x5+xn4umB7/N87PB36e+A7/N+7fF/7vJ/7vJ+7fGA7/OB7/PReX+lAAAAIXRSTlMABQkVDREmIhk3MR10LEFFPHh7cUprXE35h2XnqMLAp+mHAG9cAAAB5ElEQVRIx83WjU7CMBQFYIoiKMqU/XUboHv/l/Tce7t2XamDNSacETEmX86tlK2rx4py150o+MstMBLwWRfHKo6JCVxLnvmFGBjFQ58oF1//sUZhGy/ClSTWObgnL4O+bkeN4nY2okfNMbkRt9/vtxz8InoTsWplJSCzFxPmO8+GpSIByX3YQAuGDWtRKhKjCnxDXhF6Z4yxnZ20Wgko7BMRDmxtSGVaI4kdTIgb+zTYoJQlIMlDlmUFgrcDWWC201qSayqlTkiCddWWeV62VU0YlnpRi9VOKaSUsiyq/N0krwq2Ugt7lVpZl5BfHNiytjagMi+XYp0kCR45hMlivVQrE/uU5pXSrCB5bM6d1t2lOZItMqmliT3q5uVxqxzyW/ccfYLNKx7ZTeykMvNyac2yt2Fbc61MHLSC0rwoxbiNdlQ3GBm1NLHQsHUrtEXppR/ljNpW6DbSCoqlFiVoN6YdaFlgsSFVPs1BdT8OaB5QyQzVcaqWDows/zepxR8ObLglTrdtCRVuRNj4Rrxh+//0ke2f8KVL+Kon3GCSbmsJN9OUW3j6g0Ns+LgCij2u0h+Sghc8mlMPBMgdx5DFh59VmOVHrvmDnoNxCz3J7MFWsMuaLyR089xz/xhlfijvwutR8gv3zk6BLUUeCgAAAABJRU5ErkJggg==',
+      symbolSize: [50, 50],
+      symbolOffset: [20, 0],
+      z: 12,
+      data: [{
+        value: 0,
+        symbolPosition: 'end'
+      }, {
+        value: 0,
+        symbolPosition: 'end'
+      }, {
+        value: 333,
+        symbolPosition: 'end'
+      }, {
+        value: 0,
+        symbolPosition: 'end'
+      }]
+    }, {
+      name: '未处理',
+      type: 'pictorialBar',
+      symbol: 'image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA6CAMAAADWZboaAAAAZlBMVEUAAABe3uVe3+Vf3uVf3+Zf3uVg3+Zg3+Zf3+Vi4OZh4OZg3+Z86/Bh3+Zi4Odj4Odi4OZ86/B76/B86/Bj4ed56+9x5+xn4umB7/N87PB36e+A7/N+7fF/7vJ/7vJ+7fGA7/OB7/PReX+lAAAAIXRSTlMABQkVDREmIhk3MR10LEFFPHh7cUprXE35h2XnqMLAp+mHAG9cAAAB5ElEQVRIx83WjU7CMBQFYIoiKMqU/XUboHv/l/Tce7t2XamDNSacETEmX86tlK2rx4py150o+MstMBLwWRfHKo6JCVxLnvmFGBjFQ58oF1//sUZhGy/ClSTWObgnL4O+bkeN4nY2okfNMbkRt9/vtxz8InoTsWplJSCzFxPmO8+GpSIByX3YQAuGDWtRKhKjCnxDXhF6Z4yxnZ20Wgko7BMRDmxtSGVaI4kdTIgb+zTYoJQlIMlDlmUFgrcDWWC201qSayqlTkiCddWWeV62VU0YlnpRi9VOKaSUsiyq/N0krwq2Ugt7lVpZl5BfHNiytjagMi+XYp0kCR45hMlivVQrE/uU5pXSrCB5bM6d1t2lOZItMqmliT3q5uVxqxzyW/ccfYLNKx7ZTeykMvNyac2yt2Fbc61MHLSC0rwoxbiNdlQ3GBm1NLHQsHUrtEXppR/ljNpW6DbSCoqlFiVoN6YdaFlgsSFVPs1BdT8OaB5QyQzVcaqWDows/zepxR8ObLglTrdtCRVuRNj4Rrxh+//0ke2f8KVL+Kon3GCSbmsJN9OUW3j6g0Ns+LgCij2u0h+Sghc8mlMPBMgdx5DFh59VmOVHrvmDnoNxCz3J7MFWsMuaLyR089xz/xhlfijvwutR8gv3zk6BLUUeCgAAAABJRU5ErkJggg==',
+      symbolSize: [50, 50],
+      symbolOffset: [20, 0],
+      z: 12,
+      data: [{
+        value: 0,
+        symbolPosition: 'end'
+      }, {
+        value: 0,
+        symbolPosition: 'end'
+      }, {
+        value: 0,
+        symbolPosition: 'end'
+      }, {
+        value: 222,
+        symbolPosition: 'end'
+      }]
+    }
+    ]
+  }
+}
