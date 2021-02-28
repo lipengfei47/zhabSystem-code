@@ -5,12 +5,16 @@
       <industry-analysis v-if="pageType==='industryAnalysisPage'"></industry-analysis>
       <!-- 案件信息 -->
       <case-info v-if="pageType==='caseOutPage'"></case-info>
+      <!-- 企业分析 -->
+      <company-analysis v-if="pageType==='companyDeatilPage'"></company-analysis>
     </template>
     <template>
       <!-- 行业经营 -->
       <industry-manage v-if="pageType==='industryAnalysisPage'"></industry-manage>
       <!-- 附近情况 -->
       <nearby-condition v-if="pageType==='caseOutPage'"></nearby-condition>
+      <!-- 企业经营情况 -->
+      <company-operation-condition v-if="pageType==='companyDeatilPage'"></company-operation-condition>
     </template>
     <!-- 人员构成 -->
     <staff-composition></staff-composition>
@@ -22,6 +26,8 @@ import industryManage from './industry-manage'
 import staffComposition from './staff-composition'
 import caseInfo from './case-info'
 import nearbyCondition from './nearby-condition'
+import companyAnalysis from './company-analysis'
+import companyOperationCondition from './company-operation-condition'
 import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'wisdomLeft',
@@ -37,7 +43,9 @@ export default {
     industryManage,
     staffComposition,
     caseInfo,
-    nearbyCondition
+    nearbyCondition,
+    companyAnalysis,
+    companyOperationCondition
   },
   methods: {
     ...mapActions({
