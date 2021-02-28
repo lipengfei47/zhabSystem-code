@@ -1,6 +1,6 @@
 <template>
   <div class="bg">
-    <div class="title">国安安保服务有限公司</div>
+    <div class="title"> <img src="../../assets/crown1.png" style="margin-right:10px">国安安保服务有限公司</div>
     <div class="line">
     <img src="../../assets/spot.png" style=" float:left;margin: 10px 11px 0 33px">
     <div class="text">位置：崂山区松岭路68号</div>
@@ -60,7 +60,6 @@ export default {
     float: left;
     line-height: 20px;
     color: #fff;
-    letter-spacing: 3px;
     text-align: center;
     margin: 34px 0 20px 0;
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="bg">
-    <div class="title">国安安保服务有限公司</div>
+    <div class="title">张三</div>
     <div class="line">
     <img src="../../assets/spot.png" style=" float:left;margin: 10px 11px 0 33px">
     <div class="text">位置：崂山区松岭路68号</div>
@@ -49,30 +49,29 @@ export default {
 <style lang="scss" scoped>
   .bg{
     position: absolute;
-    width: 296px;
-    height: 315px;
-    background: url(../../assets/bg1.png);
+    width: 248px;
+    height: 312px;
+    background: url(../../assets/bg2.png);
   }
   .title{
-    width: 296px;
+    width: 217px;
     height: 20px;
     font-size: 20px;
     float: left;
     line-height: 20px;
     color: #fff;
     letter-spacing: 3px;
-    text-align: center;
-    margin: 34px 0 20px 0;
+    margin: 34px 0 20px 31px;
   }
   .line{
-    width: 296px;
+    width: 248px;
     height: 29px;
     font-size: 20px;
     float: left;
     line-height: 29px;
     color: #fff;
     .text{
-      width: 200px;
+      width: 180px;
       float: left;
       font-size: 16px;
       color: #fff;
