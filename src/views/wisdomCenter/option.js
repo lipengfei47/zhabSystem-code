@@ -58,66 +58,65 @@ export function chartOptionHaveCard () {
       center: ['50%', '50%'], // 中心点位置
       radius: '80%' // 图形大小
     }],
-    series: [
-      {
-        name: '小环',
-        type: 'gauge',
-        splitNumber: 8,
-        radius: '100%',
-        center: ['50%', '50%'],
-        startAngle: 0,
-        endAngle: 359.9999,
-        axisLine: {
-          show: false
+    series: [{
+      name: '小环',
+      type: 'gauge',
+      splitNumber: 8,
+      radius: '100%',
+      center: ['50%', '50%'],
+      startAngle: 0,
+      endAngle: 359.9999,
+      axisLine: {
+        show: false
+      },
+      axisTick: {
+        show: true,
+        lineStyle: {
+          color: color[1],
+          width: 3,
+          type: 'dotted',
+          shadowBlur: 1,
+          shadowColor: color[1]
         },
-        axisTick: {
-          show: true,
-          lineStyle: {
-            color: color[1],
-            width: 3,
-            type: 'dotted',
-            shadowBlur: 1,
-            shadowColor: color[1]
-          },
-          length: 3
-        },
-        splitLine: {
-          show: false
-        },
-        axisLabel: {
-          show: false
-        },
-        detail: {
-          show: false
+        length: 3
+      },
+      splitLine: {
+        show: false
+      },
+      axisLabel: {
+        show: false
+      },
+      detail: {
+        show: false
+      }
+    },
+    {
+      type: 'pie',
+      name: '内层细圆环',
+      radius: ['61%', '53%'],
+      startAngle: 120,
+      hoverAnimation: false,
+      clockWise: true,
+      itemStyle: {
+        normal: {
+          color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
+            offset: 0,
+            color: color[0]
+          }, {
+            offset: 1,
+            color: color[1]
+          }])
         }
       },
-      {
-        type: 'pie',
-        name: '内层细圆环',
-        radius: ['61%', '53%'],
-        startAngle: 120,
-        hoverAnimation: false,
-        clockWise: true,
-        itemStyle: {
-          normal: {
-            color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
-              offset: 0,
-              color: color[0]
-            }, {
-              offset: 1,
-              color: color[1]
-            }])
-          }
-        },
-        tooltip: {
-          show: false
+      tooltip: {
+        show: false
 
-        },
-        label: {
-          show: false
-        },
-        data: [100]
-      }
+      },
+      label: {
+        show: false
+      },
+      data: [100]
+    }
     ]
   }
 }
@@ -182,71 +181,71 @@ export function chartOptionNoneCard () {
       radius: '100%' // 图形大小
 
     }],
-    series: [
-      {
-        name: '小环',
-        type: 'gauge',
-        splitNumber: 8,
-        radius: '100%',
-        center: ['50%', '50%'],
-        startAngle: 0,
-        endAngle: 359.9999,
-        axisLine: {
-          show: false
+    series: [{
+      name: '小环',
+      type: 'gauge',
+      splitNumber: 8,
+      radius: '100%',
+      center: ['50%', '50%'],
+      startAngle: 0,
+      endAngle: 359.9999,
+      axisLine: {
+        show: false
+      },
+      axisTick: {
+        show: true,
+        lineStyle: {
+          color: color1[1],
+          width: 3,
+          type: 'dotted',
+          shadowBlur: 1,
+          shadowColor: color1[1]
         },
-        axisTick: {
-          show: true,
-          lineStyle: {
-            color: color1[1],
-            width: 3,
-            type: 'dotted',
-            shadowBlur: 1,
-            shadowColor: color1[1]
-          },
-          length: 3
-        },
-        splitLine: {
-          show: false
-        },
-        axisLabel: {
-          show: false
-        },
-        detail: {
-          show: false
+        length: 3
+      },
+      splitLine: {
+        show: false
+      },
+      axisLabel: {
+        show: false
+      },
+      detail: {
+        show: false
+      }
+    },
+    {
+      type: 'pie',
+      name: '内层细圆环',
+      radius: ['61%', '53%'],
+      startAngle: 120,
+      hoverAnimation: false,
+      clockWise: true,
+      itemStyle: {
+        normal: {
+          color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
+            offset: 0,
+            color: color1[0]
+          }, {
+            offset: 1,
+            color: color1[1]
+          }])
         }
       },
-      {
-        type: 'pie',
-        name: '内层细圆环',
-        radius: ['61%', '53%'],
-        startAngle: 120,
-        hoverAnimation: false,
-        clockWise: true,
-        itemStyle: {
-          normal: {
-            color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
-              offset: 0,
-              color: color1[0]
-            }, {
-              offset: 1,
-              color: color1[1]
-            }])
-          }
-        },
-        tooltip: {
-          show: false
+      tooltip: {
+        show: false
 
-        },
-        label: {
-          show: false
-        },
-        data: [900]
-      }
+      },
+      label: {
+        show: false
+      },
+      data: [900]
+    }
     ]
   }
 }
 const value = 650
 const int = value.toFixed(2).split('.')[0]
+
 // 党员基本情况
 export function chartOptionParty () {
   return {

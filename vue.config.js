@@ -10,6 +10,7 @@ module.exports = {
     config.resolve.alias
       .set('views', join('src/views'))
       .set('utils', join('src/utils'))
+      .set('assets', join('src/assets'))
       .set('components', join('src/components'))
   },
   // 调整 webpack 配置

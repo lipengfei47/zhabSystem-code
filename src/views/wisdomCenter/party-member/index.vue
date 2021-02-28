@@ -30,6 +30,7 @@
 </template>
 <script>
 import { chartOptionParty } from '../option.js'
+
 export default {
   name: 'party-member',
   data () {
@@ -61,7 +62,7 @@ export default {
   height: 100%;
   padding: 20px;
   display: flex;
-  &-echarts{
+  &-echarts {
     width: 50%;
   }
   &-right {

@@ -22,7 +22,11 @@
   </div>
 </template>
 <script>
-// const rank1Url = require('assets/images/shibeiScreen/rank1.png')
+const rank1Url = require('assets/first.png')
+const rank2Url = require('assets/two.png')
+const rank3Url = require('assets/three.png')
+const styleIcon = 'width:18px;height:24px;line-height: 19px; text-align:center;color:#000000;'
+
 export default {
   name: 'command-dispatch',
   data () {
@@ -34,9 +38,9 @@ export default {
       },
       headerList: ['序号', '企业名', '次数', '占比'],
       dataList: [
-        [1, '国庆安保', 3077, '90%'],
-        [2, '嘉禾安保', 1290, '10%'],
-        [3, '未来安保', 3077, '29%'],
+        [`<span style="${styleIcon}background: url(${rank1Url}) no-repeat"><span>`, '国庆安保', 3077, '90%'],
+        [`<span style="${styleIcon}background: url(${rank2Url}) no-repeat"><span>`, '嘉禾安保', 1290, '10%'],
+        [`<span style="${styleIcon}background: url(${rank3Url}) no-repeat"><span>`, '未来安保', 3077, '29%'],
         [4, '北京安保', 3077, '30%'],
         [5, '仁泰安保', 2094, '25%'],
         [6, '北京安保', 3077, '78%']
