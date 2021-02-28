@@ -4,19 +4,19 @@
     <div class="page1" v-if="pageFlag == '1'">
       <div class="sit3">
         <dialog1 id="dialog" v-show="flag"></dialog1>
-      <img src="../../assets/y.png" style="position: absolute;left: 100px;top: 400px" @click="pageTwoClick" @mouseover="display"
+      <img src="../../assets/y.png" style="position: absolute;left: 100px;top: 400px" @click="pageThreeClickToThree" @mouseover="display"
     @mouseleave="hide">
-      <img src="../../assets/y.png" style="position: absolute;left: 210px;top: 300px" @click="pageTwoClick" @mouseover="display"
+      <img src="../../assets/y.png" style="position: absolute;left: 210px;top: 300px" @click="pageThreeClickToThree" @mouseover="display"
     @mouseleave="hide">
-      <img src="../../assets/y.png" style="position: absolute;left: 400px;top: 150px" @click="pageTwoClick" @mouseover="display"
+      <img src="../../assets/y.png" style="position: absolute;left: 400px;top: 150px" @click="pageThreeClickToThree" @mouseover="display"
     @mouseleave="hide">
-      <img src="../../assets/y.png" style="position: absolute;left: 500px;top: 220px" @click="pageTwoClick" @mouseover="display"
+      <img src="../../assets/y.png" style="position: absolute;left: 500px;top: 220px" @click="pageThreeClickToThree" @mouseover="display"
     @mouseleave="hide">
-      <img src="../../assets/y.png" style="position: absolute;left: 500px;top: 350px" @click="pageTwoClick" @mouseover="display"
+      <img src="../../assets/y.png" style="position: absolute;left: 500px;top: 350px" @click="pageThreeClickToThree" @mouseover="display"
     @mouseleave="hide">
-      <img src="../../assets/y.png" style="position: absolute;left: 450px;top: 420px" @click="pageTwoClick" @mouseover="display"
+      <img src="../../assets/y.png" style="position: absolute;left: 450px;top: 420px" @click="pageThreeClickToThree" @mouseover="display"
     @mouseleave="hide">
-      <img src="../../assets/y.png" style="position: absolute;left: 350px;top: 330px" @click="pageTwoClick" @mouseover="display"
+      <img src="../../assets/y.png" style="position: absolute;left: 350px;top: 330px" @click="pageThreeClickToThree" @mouseover="display"
     @mouseleave="hide">
       <img src="../../assets/jb.png" style="position: absolute;left: 360px;top: 380px" @click="pageOneClick" >
     </div>
@@ -73,6 +73,7 @@
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex'
 import dialog1 from './dialog1.vue'
 import dialog2 from './dialog2.vue'
 import dialog3 from './dialog3.vue'
@@ -93,6 +94,9 @@ export default {
     dialog4
   },
   methods: {
+    ...mapActions({
+      set_pageType: 'SET_PAGETYPE'
+    }),
     handClick () {
     },
     display (e) {
@@ -124,12 +128,23 @@ export default {
     },
     pageOneClick () {
       this.pageFlag = '2'
+      // 第一页跳第二页
+      this.set_pageType('caseOutPage')
     },
     pageTwoClick () {
       this.pageFlag = '3'
+      // 第二页跳第三页
+      this.set_pageType('caseCompanyPage')
     },
     pageThreeClick () {
       this.pageFlag = '1'
+      // 第三页跳第一页
+      this.set_pageType('industryAnalysisPage')
+    },
+    pageThreeClickToThree () {
+      this.pageFlag = '3'
+      // 第一页跳第三页
+      this.set_pageType('companyDeatilPage')
     }
   }
 }
