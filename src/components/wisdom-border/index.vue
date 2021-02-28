@@ -5,7 +5,7 @@
       <slot name='wisdom-border-title'></slot>
     </div>
     <div class="wisdom-border-content">
-      <slot name='wisdom-border-content'>内容</slot>
+      <slot name='wisdom-border-content'></slot>
     </div>
   </div>
 </template>
