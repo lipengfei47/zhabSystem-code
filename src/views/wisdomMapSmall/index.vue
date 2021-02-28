@@ -14,9 +14,9 @@
     @mouseleave="hide">
       <img src="../../assets/y.png" style="position: absolute;left: 500px;top: 350px" @click="pageTwoClick" @mouseover="display"
     @mouseleave="hide">
-      <img src="../../assets/y.png" style="position: absolute;left: 380px;top: 450px" @click="pageTwoClick" @mouseover="display"
+      <img src="../../assets/y.png" style="position: absolute;left: 450px;top: 420px" @click="pageTwoClick" @mouseover="display"
     @mouseleave="hide">
-      <img src="../../assets/y.png" style="position: absolute;left: 230px;top: 350px" @click="pageTwoClick" @mouseover="display"
+      <img src="../../assets/y.png" style="position: absolute;left: 350px;top: 330px" @click="pageTwoClick" @mouseover="display"
     @mouseleave="hide">
       <img src="../../assets/jb.png" style="position: absolute;left: 360px;top: 380px" @click="pageOneClick" >
     </div>
