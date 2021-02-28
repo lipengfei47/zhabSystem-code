@@ -14,16 +14,14 @@
         <div class="span">序号</div>
         <div class="span">姓名</div>
         <div class="span" >状态</div>
-        <div class="span">
-          联系
-        </div>
+        <div class="span">调度</div>
       </div>
       <div class="line">
         <div class="span" style="font-weight:bold;font-style: italic">1</div>
         <div class="span">张某某</div>
         <div class="span" style="color:#52BA56">在岗</div>
         <div class="span">
-          <img src="../../assets/phone.png">
+          <img src="../../assets/dd.png">
         </div>
       </div>
       <div class="line">
@@ -31,7 +29,7 @@
         <div class="span">张某某</div>
         <div class="span" style="color:#52BA56">在岗</div>
         <div class="span">
-          <img src="../../assets/phone.png">
+          <img src="../../assets/dd.png">
         </div>
       </div>
       <div class="line">
@@ -39,7 +37,15 @@
         <div class="span">张某某</div>
         <div class="span" style="color:#52BA56">在岗</div>
         <div class="span">
-          <img src="../../assets/phone.png">
+          <img src="../../assets/dd.png">
+        </div>
+      </div>
+      <div class="line">
+        <div class="span" style="font-weight:bold;font-style: italic">4</div>
+        <div class="span">张某某</div>
+        <div class="span" style="color:#52BA56">在岗</div>
+        <div class="span">
+          <img src="../../assets/dd.png">
         </div>
       </div>
     </div>
@@ -95,7 +101,7 @@ export default {
   .table{
     width: 244px;
     float: left;
-    margin:  0 0 0 29px;
+    margin:  20px 0 0 29px;
     .title1{
       width: 244px;
       height: 28px;
