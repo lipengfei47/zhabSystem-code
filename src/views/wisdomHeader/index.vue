@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     goHref () {
-      window.open('56.32.38.192.8080/zhabAdmin')
+      window.open('http://56.32.38.192:8080/zhabAdmin')
     }
   }
 }
