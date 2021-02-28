@@ -2,15 +2,18 @@
   <div class="hold-certificate">
     <wisdom-border v-bind={...style}>
       <div slot='wisdom-border-title'>持证情况</div>
-      <div slot='wisdom-border-content' class="industry-manage-content">
+      <div slot='wisdom-border-content'
+           class="industry-manage-content">
         <wisdom-echarts-frame @myChartMethod="chartManageBarMethod"
-                              ref="chartManageBar"></wisdom-echarts-frame>
+                              ref="chartManageHaveCard"></wisdom-echarts-frame>
+        <wisdom-echarts-frame @myChartMethod="chartManageNoneCardMethod"
+                              ref="chartManageNoneCard"></wisdom-echarts-frame>
       </div>
     </wisdom-border>
   </div>
 </template>
 <script>
-// import { chartOptionSatff } from '../option.js'
+import { chartOptionHaveCard, chartOptionNoneCard } from '../option.js'
 export default {
   name: 'hold-certificate',
   data () {
@@ -19,18 +22,27 @@ export default {
         width: '454px',
         height: '262px',
         url: require('../../../assets/staff-composition-border.png')
-      }
+      },
+      myChartHaveCard: null,
+      myChartNoneCard: null
     }
   },
   components: {
   },
   methods: {
     chartManageBarMethod (myChart) {
-      // this.myChartBar = myChart
-      // this.$refs.chartManageBar.clear()
-      // // this.$refs.chartManageBar.showLoading()
-      // this.myChartBar.setOption(chartOptionSatff())
-      // this.$refs.chartManageBar.hideLoading()
+      this.myChartHaveCard = myChart
+      this.$refs.chartManageHaveCard.clear()
+      // this.$refs.chartManageBar.showLoading()
+      this.myChartHaveCard.setOption(chartOptionHaveCard())
+      this.$refs.chartManageHaveCard.hideLoading()
+    },
+    chartManageNoneCardMethod (myChart) {
+      this.myChartNoneCard = myChart
+      this.$refs.chartManageNoneCard.clear()
+      // this.$refs.chartManageBar.showLoading()
+      this.myChartNoneCard.setOption(chartOptionNoneCard())
+      this.$refs.chartManageNoneCard.hideLoading()
     }
   }
 }
@@ -41,7 +53,6 @@ export default {
   width: 100%;
   height: 100%;
   padding: 20px;
-  color: rgb(72, 238, 216);
-  color: rgb(43, 202, 197);
+display: flex;
 }
 </style>
