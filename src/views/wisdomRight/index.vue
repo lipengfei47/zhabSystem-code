@@ -1,13 +1,13 @@
 <template>
   <div class="wisdom-right">
     <template>
-      <company-right v-if="pageType !=='companyDeatilPage'"></company-right>
+      <company-right v-if="pageType !=='companyDeatilPage' && pageType!=='caseCompanyPage'"></company-right>
       <!-- 保安人员 -->
-      <security-people v-if="pageType==='companyDeatilPage'"></security-people>
+      <security-people v-if="pageType==='companyDeatilPage' || pageType==='caseCompanyPage'"></security-people>
     </template>
     <template>
-      <command-dispatch v-if="pageType !=='companyDeatilPage'"></command-dispatch>
-      <company-dispatch v-if="pageType==='companyDeatilPage'"></company-dispatch>
+      <command-dispatch v-if="pageType !=='companyDeatilPage' && pageType!=='caseCompanyPage'"></command-dispatch>
+      <company-dispatch v-if="pageType==='companyDeatilPage' || pageType=='caseCompanyPage'"></company-dispatch>
     </template>
     <census-register></census-register>
   </div>

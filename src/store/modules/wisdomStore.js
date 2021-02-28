@@ -6,7 +6,7 @@ export default {
      * @param companyDeatilPage 企业详细信息
      * @param caseCompanyPage 调度企业企业信息页面
      */
-    pageType: 'industryAnalysisPage'
+    pageType: 'caseCompanyPage'
   },
   mutations: {
     set_pageType (state, type) {
