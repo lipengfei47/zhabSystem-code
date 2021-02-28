@@ -25,14 +25,14 @@
     <!-- 第二张图 -->
     <div class="page2" v-if="pageFlag == '2'">
     <div class="sit3">
-    <dialog3 id="dialog" title = '1' style="left:35px;top:-85px"></dialog3>
+    <dialog3 id="dialog" title = '1' style="left:85px;top:-85px"></dialog3>
     <dialog3 id="dialog" title = '2' style="left:435px;;top:0px"></dialog3>
     <dialog3 id="dialog" title = '3' style="left:-105px;top:80px"></dialog3>
-    <img src="../../assets/r.png" style="position: absolute;left: 550px;top: 300px" @click="handClick"
+    <img src="../../assets/r.png" style="position: absolute;left: 550px;top: 300px" @click="pageTwoClick"
     >
-    <img src="../../assets/o.png" style="position: absolute;left: 150px;top: 200px" @click="handClick"
+    <img src="../../assets/o.png" style="position: absolute;left: 200px;top: 200px" @click="pageTwoClick"
     >
-    <img src="../../assets/g.png" style="position: absolute;left: 10px;top: 380px" @click="handClick"
+    <img src="../../assets/g.png" style="position: absolute;left: 10px;top: 380px" @click="pageTwoClick"
    >
       <img src="../../assets/jb.png" style="position: absolute;left: 320px;top: 280px" @click="pageTwoClick">
     </div>
