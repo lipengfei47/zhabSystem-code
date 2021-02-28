@@ -17,7 +17,7 @@
   </div>
 </template>
 <script>
-import { chartOptionAnalysis } from '../option.js'
+import { chartOptionAnalysiscc } from '../option.js'
 
 export default {
   name: 'industry-analysis',
@@ -36,7 +36,7 @@ export default {
       this.myChartBar = myChart
       this.$refs.chartManageBar.clear()
       // this.$refs.chartManageBar.showLoading()
-      this.myChartBar.setOption(chartOptionAnalysis())
+      this.myChartBar.setOption(chartOptionAnalysiscc())
       this.$refs.chartManageBar.hideLoading()
     }
   }
