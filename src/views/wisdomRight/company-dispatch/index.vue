@@ -89,7 +89,23 @@ export default {
     onChangItem (selectId) {
       this.selectId = selectId
       if (selectId === 0) {
+        this.headerList = ['排名', '姓名', '次数', '评价']
+        this.dataList = [
+          [`<span style="${styleIcon}background: url(${rank1Url}) no-repeat"><span>`, '张某某', 15, '90%'],
+          [`<span style="${styleIcon}background: url(${rank2Url}) no-repeat"><span>`, '李某某', 12, '10%'],
+          [`<span style="${styleIcon}background: url(${rank3Url}) no-repeat"><span>`, '赵某某', 10, '29%'],
+          [4, '王某某', 8, '30%'],
+          [5, '韩某某', 5, '25%']
+        ]
       } else if (selectId === 1) {
+        this.headerList = ['排名', '区域', '在岗人数', '可调人数']
+        this.dataList = [
+          [`<span style="${styleIcon}background: url(${rank1Url}) no-repeat"><span>`, 'A区域', 77, 50],
+          [`<span style="${styleIcon}background: url(${rank2Url}) no-repeat"><span>`, 'B区域', 90, 78],
+          [`<span style="${styleIcon}background: url(${rank3Url}) no-repeat"><span>`, 'C区域', 77, 41],
+          [4, 'D区域', 54, 30],
+          [5, 'E区域', 21, 15]
+        ]
       }
     }
   }

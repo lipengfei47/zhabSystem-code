@@ -72,11 +72,11 @@ export default {
         },
         {
           id: 1,
-          value: '党员'
+          value: '党建'
         },
         {
           id: 2,
-          value: '持证'
+          value: '装备'
         }
       ],
       selectId: 0

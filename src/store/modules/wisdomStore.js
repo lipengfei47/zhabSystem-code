@@ -5,7 +5,7 @@ export default {
      * @param caseOutPage 案情筛选页面
      * @param companyDeatilPage 企业详细信息
      */
-    pageType: 'companyDeatilPage'
+    pageType: 'caseOutPage'
   },
   mutations: {
     set_pageType (state, type) {
