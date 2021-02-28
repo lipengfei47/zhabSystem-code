@@ -4,10 +4,15 @@
     <wisdom-border v-bind="{ ...style }">
       <div slot="wisdom-border-title">企业分析</div>
       <div slot="wisdom-border-content" class="census-register-content">
-        <div class="wisdom-analysis">
-          <div class="wisdom-analysis-left">保安培训机构<span class="analysic-weight">3家</span></div>
-          <div class="wisdom-analysis-right">守押企业<span class="analysic-weight">3家</span></div>
-        </div>
+<!--        <div class="wisdom-analysis">-->
+<!--          <div class="wisdom-analysis-left">保安培训机构<span class="analysic-weight">3家</span></div>-->
+<!--          <div class="wisdom-analysis-right">守押企业<span class="analysic-weight">3家</span></div>-->
+          <img src="../../../assets/enterprise.png"
+
+               width="300"
+               height="60" />
+<!--          <wisdom-echarts-frame-->
+<!--        </div>-->
         <wisdom-echarts-frame
           class="anaylsis-chart"
           @myChartMethod="chartManageBarMethod"
