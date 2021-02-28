@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import { chartOptionManageBar } from '../option.js'
+import { chartOptionManageBarCondition } from '../option.js'
 export default {
   name: 'nearby-condition',
   data () {
@@ -37,7 +37,7 @@ export default {
       this.myChartBar = myChart
       this.$refs.chartManageBar.clear()
       // this.$refs.chartManageBar.showLoading()
-      this.myChartBar.setOption(chartOptionManageBar())
+      this.myChartBar.setOption(chartOptionManageBarCondition())
       this.$refs.chartManageBar.hideLoading()
     }
   }
