@@ -3,6 +3,7 @@
     <div>
       <wisdom-header></wisdom-header>
     </div>
+    <time-dialog></time-dialog>
     <wisdom-map-small></wisdom-map-small>
     <div class="wisdom-content-echarts">
       <wisdom-left></wisdom-left>
@@ -20,6 +21,7 @@ import wisdomCenter from './wisdomCenter'
 import wisdomMap from './wisdomMap'
 import wisdomMapSmall from './wisdomMapSmall'
 import wisdomHeader from './wisdomHeader'
+import timeDialog from './wisdomMap/components/timedialog'
 
 export default {
   data () {
@@ -33,8 +35,8 @@ export default {
     wisdomCenter,
     wisdomMap,
     wisdomHeader,
-    wisdomMapSmall
-
+    wisdomMapSmall,
+    timeDialog
   }
 }
 </script>

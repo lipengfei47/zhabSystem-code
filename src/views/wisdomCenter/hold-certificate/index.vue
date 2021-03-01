@@ -14,6 +14,7 @@
 </template>
 <script>
 import { chartOptionHaveCard, chartOptionNoneCard } from '../option.js'
+import { mapGetters } from 'vuex'
 export default {
   name: 'hold-certificate',
   data () {
@@ -27,7 +28,18 @@ export default {
       myChartNoneCard: null
     }
   },
+  computed: {
+    ...mapGetters(['pageType'])
+  },
   components: {
+  },
+  watch: {
+    pageType: {
+      handler: function (value) {
+        this.chartManageBarMethod(this.myChartHaveCard)
+        this.chartManageNoneCardMethod(this.myChartNoneCard)
+      }
+    }
   },
   methods: {
     chartManageBarMethod (myChart) {

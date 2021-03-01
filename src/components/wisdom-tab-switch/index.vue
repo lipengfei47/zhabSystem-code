@@ -97,7 +97,8 @@ export default {
   // justify-content: space-around;
   .active {
     color: #05eae4;
-    font-size: 16px;
+    font-size: 22px;
+    font-weight: bold;
   }
 }
 </style>

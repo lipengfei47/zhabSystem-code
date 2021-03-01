@@ -19,6 +19,7 @@
 </template>
 <script>
 import { chartOptionSatff, chartOptionLocal } from '../option.js'
+import { mapGetters } from 'vuex'
 export default {
   name: 'census-register',
   data () {
@@ -27,6 +28,19 @@ export default {
         width: '454px',
         height: '262px',
         url: require('../../../assets/staff-composition-border.png')
+      },
+      myChartBar: null,
+      myChartPie: null
+    }
+  },
+  computed: {
+    ...mapGetters(['pageType'])
+  },
+  watch: {
+    pageType: {
+      handler: function (value) {
+        this.chartManageBarMethod(this.myChartBar)
+        this.chartLocalMethod(this.myChartPie)
       }
     }
   },

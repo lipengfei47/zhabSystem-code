@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       scale: 0,
-      width: 1920, // 分辨率
+      width: 1920, // 分辨率1792，1120
       height: 1080
     }
   },

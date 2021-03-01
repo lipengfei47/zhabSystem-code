@@ -1,7 +1,7 @@
 <template>
   <div class="industry-analysis">
     <wisdom-border v-bind="{ ...style }">
-      <div slot="wisdom-border-title">行业分析</div>
+      <div slot="wisdom-border-title">行业概况</div>
       <div slot="wisdom-border-content" class="census-register-content">
         <div class="wisdom-analysis">
           <div class="wisdom-analysis-left">保安培训机构<span class="analysic-weight">3家</span></div>

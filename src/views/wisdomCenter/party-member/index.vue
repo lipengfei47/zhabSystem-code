@@ -30,6 +30,7 @@
 </template>
 <script>
 import { chartOptionParty } from '../option.js'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'party-member',
@@ -39,6 +40,17 @@ export default {
         width: '454px',
         height: '262px',
         url: require('../../../assets/staff-composition-border.png')
+      },
+      myChartBar: null
+    }
+  },
+  computed: {
+    ...mapGetters(['pageType'])
+  },
+  watch: {
+    pageType: {
+      handler: function (value) {
+        this.chartManageBarMethod(this.myChartBar)
       }
     }
   },
