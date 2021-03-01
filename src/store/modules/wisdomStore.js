@@ -1,3 +1,4 @@
+import { getPageWidth, getPageHeight } from 'utils/common.js'
 export default {
   state: {
     /***
@@ -6,7 +7,9 @@ export default {
      * @param companyDeatilPage 企业详细信息
      * @param caseCompanyPage 调度企业企业信息页面
      */
-    pageType: 'industryAnalysisPage'
+    pageType: 'industryAnalysisPage',
+    pageWidth: getPageWidth(),
+    pageHeight: getPageHeight()
   },
   mutations: {
     set_pageType (state, type) {

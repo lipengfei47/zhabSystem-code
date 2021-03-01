@@ -143,3 +143,24 @@ export function getNewData (AddDayCount) {
 
   return y + '-' + m + '-' + d
 }
+/**
+ * @description: 获取页面宽度及高度
+ * @param {type}
+ * @return {Number} 页面可视窗口宽度及高度
+ */
+export function getPageWidth () {
+  // 页面可视窗口宽度
+  // let pageWidth = document.body.clientWidth
+  let pageWidth = screen.width
+  // 页面可视窗口最小宽度
+  pageWidth = pageWidth < 1920 ? 1920 : pageWidth
+  console.log('111', pageWidth)
+  return pageWidth
+}
+export function getPageHeight () {
+  // 页面可视窗口高度
+  let pageHeight = document.documentElement.clientHeight
+  // 页面可视窗口最小高度
+  pageHeight = pageHeight < 1080 ? 1080 : pageHeight
+  return pageHeight
+}
