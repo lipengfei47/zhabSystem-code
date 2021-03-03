@@ -4,6 +4,7 @@
       <wisdom-header></wisdom-header>
     </div>
     <time-dialog></time-dialog>
+    <!-- <dispatch-dialog></dispatch-dialog> -->
     <wisdom-map-small></wisdom-map-small>
     <div class="wisdom-content-echarts">
       <wisdom-left></wisdom-left>
@@ -11,7 +12,6 @@
       <wisdom-right></wisdom-right>
     </div>
     <wisdom-map></wisdom-map>
-
   </div>
 </template>
 <script>
@@ -22,7 +22,7 @@ import wisdomMap from './wisdomMap'
 import wisdomMapSmall from './wisdomMapSmall'
 import wisdomHeader from './wisdomHeader'
 import timeDialog from './wisdomMap/components/timedialog'
-
+// import dispatchDialog from './wisdomMap/components/dispatch-dialog'
 export default {
   data () {
     return {
@@ -37,18 +37,19 @@ export default {
     wisdomHeader,
     wisdomMapSmall,
     timeDialog
+    // dispatchDialog
   }
 }
 </script>
 <style lang="scss" scoped>
-.wisdom-content{
+.wisdom-content {
   box-sizing: border-box;
-  width:100%;
+  width: 100%;
   height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
-  &-echarts{
+  &-echarts {
     box-sizing: border-box;
     display: flex;
     width: 100%;

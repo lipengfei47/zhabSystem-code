@@ -34,13 +34,10 @@ export default {
       },
       tabItemStyle: [
         {
-          marginLeft: '0px'
-        },
-        {
           marginLeft: '16px'
         },
         {
-          marginLeft: '16px'
+          marginLeft: '23px'
         }
       ],
       tabList: [

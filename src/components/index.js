@@ -9,7 +9,7 @@ import Vue from 'vue'
  *     directory: 要导入的当前模块的文件夹目录
  *     flag: 是否搜索当前路径的子目录
  *     regExp: 要匹配的文件
-*/
+ */
 const components = require.context('components/', true, /\.vue$/)
 components.keys().forEach(filename => {
   const arr = filename.replace(/\.\//, '').replace(/\.vue$/, '').split('/')
@@ -18,6 +18,6 @@ components.keys().forEach(filename => {
   Vue.component(componentName, componentConfig)
 })
 
-// const requireAll = requireContext => requireContext.keys().map(requireContext)
-// const req = require.context('./svg-icon/svg', false, /\.svg$/)
-// requireAll(req)
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+const req = require.context('./svg-icon/svg', false, /\.svg$/)
+requireAll(req)

@@ -1,12 +1,12 @@
 <template>
-    <div class="wisdom-box"
-         ref="ScaleBox"
-         :style="{
+  <div class="wisdom-box"
+       ref="ScaleBox"
+       :style="{
           width:width+'px',
           height:height+'px'
         }">
-      <wisdom-content></wisdom-content>
-    </div>
+    <wisdom-content></wisdom-content>
+  </div>
 </template>
 
 <script>
@@ -56,7 +56,5 @@ export default {
   top: 50%;
   transition: 0.3s;
   transform-origin: 0 0;
-  /* background: rgb(6, 26, 59); */
-  /* background: rgba(0, 0, 0,0.3); */
 }
 </style>

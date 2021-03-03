@@ -61,10 +61,10 @@ export default {
           marginLeft: '0px'
         },
         {
-          marginLeft: '16px'
+          marginLeft: '23px'
         },
         {
-          marginLeft: '16px'
+          marginLeft: '23px'
         }
       ],
       tabList: [
